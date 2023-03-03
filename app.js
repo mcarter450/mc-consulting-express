@@ -122,8 +122,8 @@ if (process.env.NODE_ENV == 'development') {
 else {
   // start production https server
   let sslOptions = {
-     key: fs.readFileSync('/etc/letsencrypt/live/mcarter.consulting/privkey.pem'),
-     cert: fs.readFileSync('/etc/letsencrypt/live/mcarter.consulting/fullchain.pem')
+     key: fs.readFileSync('/etc/letsencrypt/live/api.mcarter.consulting/privkey.pem'),
+     cert: fs.readFileSync('/etc/letsencrypt/live/api.mcarter.consulting/fullchain.pem')
   };
 
   let serverHttps = https.createServer(sslOptions, app).listen(port, () => {
